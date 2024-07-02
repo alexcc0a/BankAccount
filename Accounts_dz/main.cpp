@@ -10,14 +10,12 @@
 
 using namespace std;
 
-// Структура для хранения информации о банковском счёте
 struct BankAccount {
     int accountNumber;
     string accountHolderName;
     double balance;
 };
 
-// Функция для изменения баланса счёта
 void changeBalance(BankAccount& account, double newBalance) {
     account.balance = newBalance;
 }
@@ -29,8 +27,8 @@ int main() {
     cin >> account.accountNumber;
 
     cout << "Введите имя владельца: ";
-    cin.ignore(); // Удаление символа новой строки из буфера ввода
-    getline(cin, account.accountHolderName); // Ввод имени с пробелами
+    cin.ignore();
+    getline(cin, account.accountHolderName);
 
     cout << "Введите баланс: ";
     cin >> account.balance;
@@ -39,7 +37,7 @@ int main() {
     cout << "\nВведите новый баланс: ";
     cin >> newBalance;
 
-    changeBalance(account, newBalance); // Изменяем баланс с помощью функции
+    changeBalance(account, newBalance);
 
     cout << "\nВаш счет: " << account.accountNumber <<
     ", " << account.accountHolderName <<
